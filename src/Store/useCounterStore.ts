@@ -41,5 +41,6 @@ export const useCounterStore = defineStore<string, ICounterState, ICounterGetter
             await new Promise((resolve) => setTimeout(resolve, 1000))
             this.decrement()
         }
-    }
+    },
+    persist: true
 })

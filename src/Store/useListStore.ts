@@ -44,4 +44,4 @@ export const useListStore = defineStore("todoList", () => {
     return {
         listState, addTodo, removeTodo, changeIsCompleted, removeSuccessTodo, changeAllIsCompleted
     }
-})
+}, {persist: true})
