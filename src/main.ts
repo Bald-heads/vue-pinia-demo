@@ -1,5 +1,9 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
+import "@/assets/less/assets.less"
 import App from './App.vue'
 import router from './router'
+import {createPinia, Pinia} from "pinia"
 
-createApp(App).use(router).mount('#app')
+const pinia: Pinia = createPinia()
+
+createApp(App).use(router).use(pinia).mount('#app')

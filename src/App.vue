@@ -1,30 +1,41 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <div style="width: 100%;height: 100%">
+        <div class="title">
+            <h1>Pinia案例</h1>
+            <div>
+                <div>
+                    <router-link to="/" class="routerLink">计数器</router-link>
+                </div>
+                <div>
+                    <router-link to="/todo" class="routerLink">待办事项</router-link>
+                </div>
+            </div>
+        </div>
+        <div class="compount">
+            <router-view/>
+        </div>
+    </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped lang="less">
+.title {
+    color: skyblue;
+    text-align: center;
+
+    div {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+
+        .routerLink {
+            color: dodgerblue;
+            text-decoration: none;
+        }
+    }
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.compount {
+    margin-top: 50px;
+    text-align: center;
 }
 </style>
